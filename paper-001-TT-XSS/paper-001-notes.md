@@ -13,7 +13,7 @@ I first record unfamiliar terminology to reference later. Then I summarize each 
 # Terminology Notes
 
 ## 1. What is DOM-Based XSS?
-See: [DOM-Based XSS](../../Cybersecurity-Notes/DOM-Based-XSS.md)
+See: [DOM-Based XSS](https://github.com/mahinsarker420/Cybersecurity-Notes/blob/75d2c5872991ef71b63553e1e838653db61af712/Cross-Site%20Scripting%20(XSS)/DOM-Based-XSS.md)
 
 ## 2. What is Taint Tracking detection?
 Taint Tracking Based Dynamic Detection is a runtime security technique used to detect whether untrusted input (called tainted data) reaches sensitive parts of a program in a dangerous way. Think of it like placing invisible colored ink on user-controlled data and then watching where that ink spreads through the application while it runs.
