@@ -1,4 +1,11 @@
-<div style="text-align: justify;">
+<div class="justify" style="text-align: justify;">
+
+<style>
+div.justify, div.justify h1, div.justify h2, div.justify h3, div.justify p,
+div.justify li, div.justify td, div.justify th {
+    text-align: justify;
+}
+</style>
 
 # TT-XSS: A Novel Taint-Tracking Dynamic Detection Framework for DOM XSS
 
@@ -165,7 +172,7 @@ This section explains previous research related to DOM-XSS detection. As modern 
 ## 3 Detection framework for DOM-XSS
 TT-XSS dynamic DOM-XSS detection framework is mainly composed of three modules: URL information collection and analysis, taint tracking analysis and automatic vulnerability verification.
 
-![TT-XSS detection process](Figures/Detection_Process_of_TT-XSS.png)
+<p align="center"><img src="Figures/Detection_Process_of_TT-XSS.png" alt="Detection Process of TT-XSS" width="600" /></p>
 
 ### Understandable process flow of TT-XSS Detection:
 ```
@@ -326,8 +333,8 @@ Think of a DOM-XSS attack like water flowing through a house's plumbing. To prev
 
 If you miss monitoring even one pipe, you'll lose track of the water and miss potential leaks.
 
-#### **Part 1:** Controllable Sources (Where Attacks Enter)\
-![Controllable Source](Figures/controllable_source.png)
+#### **Part 1:** Controllable Sources (Where Attacks Enter)
+<p align="center"><img src="Figures/controllable_source.png" alt="Controllable sources" width="600" /></p>
 
 These are the **entry points** hackers can manipulate to inject malicious code.
 
@@ -372,7 +379,7 @@ The `location.search` contains malicious code that could be executed.
 **Why It's Dangerous:** Hackers can set `window.name` to malicious code, and even when you navigate to a new page, that value stays in your browser.
 
 #### Part 2: Transfer Functions (How Data Transforms)
-![Transfer function](Figures/transfer_function.png)
+<p align="center"><img src="Figures/transfer_function.png" alt="Transfer functions" width="600" /></p>
 
 Once malicious data enters, it often gets modified as it flows through the code. These are the "pipes" that change the data but must keep the tracking tag attached.
 
@@ -420,7 +427,8 @@ document.getElementById('search').value = userInput;
 If userInput is tagged as dangerous, the tag must transfer to the element's value.
 
 #### Part 3: Sink Functions (Where Attacks Execute)
-![Sink functions](Figures/sink_function.png)
+<p align="center"><img src="Figures/sink_function.png" alt="Sink functions" width="600" /></p>
+
 These are the danger zones - functions that can actually execute code or modify the page in harmful ways.
 
 **Why They're Called "Sinks":**
